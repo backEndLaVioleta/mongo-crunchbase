@@ -1,0 +1,24 @@
+{
+  "name": "mongo-crunchbase",
+  "version": "1.0.0",
+  "description": "![](https://i.imgur.com/FqGd9jz.jpg)",
+  "main": "config.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/backEndLaVioleta/mongo-crunchbase.git"
+  },
+  "author": "robby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/backEndLaVioleta/mongo-crunchbase/issues"
+  },
+  "homepage": "https://github.com/backEndLaVioleta/mongo-crunchbase#readme",
+  "dependencies": {
+    "clear": "^0.1.0",
+    "mongodb": "^4.1.4"
+  }
+}
