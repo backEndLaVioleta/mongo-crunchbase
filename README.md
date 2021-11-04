@@ -15,6 +15,9 @@ Utiliza el fichero __crunchdatabase__.
 ## Ejercicio
 
 1. Importa la colección de `companies` en la bd `crunchbase`.
+```
+mongoimport --host <myOwnCluster> --ssl --authenticationDatabase admin --username <myown> --password <myOwnPass> --db crunchbase --collection companies --file companies.json
+```
 2. Crea un nuevo proyecto node e instala los package: `clear` y `mongodb`
 3. Crea un módulo `connect.js` con la conexión a la bd.
 4. Importa el módulo `connect.js` en un fichero `main.js` y realiza las siguientes funciones:
