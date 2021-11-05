@@ -1,9 +1,9 @@
 const queries = {
     0 :{},
-    1 :{name: 1, _id: 0},
-    2 :{}.count(),
-    3 :{founded_year: 2004},
-    4 :{$and: [{founded_year: 2004}, {founded_month: 2}]},
+    1 :[{name: 1, _id: 0}],
+    2 :{}
+    3 :{},
+    4 :{},
     5 :{},
     6 :{},
     7 :{},
