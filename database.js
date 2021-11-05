@@ -20,9 +20,9 @@ class MongoManager {
         this.client = new MongoClient(this.url, {useNewUrlParser: true});
         this.client.connect();
         this.db =  this.client.db(dbName);
-        this.collection = this.db.collection('companies', {});
+        // this.collection = this.db.collection('companies', {});
         console.log('create connection works');
-        //console.log(this.db);
+        
 
     } catch (error) {
 
