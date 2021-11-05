@@ -13,16 +13,16 @@ class MongoManager {
            this._createConnection(config.db); 
     }
 
-   async  _createConnection(dbName){
+   async  _createConnection(dbConfig){
 
     try {
-
+        console.log(this.url);
         this.client = new MongoClient(this.url, {useNewUrlParser: true});
         this.client.connect();
-        this.db =  this.client.db(dbName);
-        this.collection = this.db.collection('companies', {});
+        this.db =  this.client.db(dbConfig);
+       // this.collection = this.db.collection('companies', {});
         console.log('create connection works');
-        //console.log(this.db);
+        
 
     } catch (error) {
 
@@ -67,9 +67,9 @@ class MongoManager {
         try {
             const result = await this.db.collection(collectionName)
                                         .find(query)
-                                        .limit(10)
+                                        .limit(5)
                                         .toArray();
-        console.log(result);
+            console.log(result);
             this._dropConnection();
             return result;
 
@@ -101,7 +101,21 @@ class MongoManager {
         } catch (error) {
             throw error;
         }
-    }
+    };
+
+    async countDb(collectionName){
+        try {
+            const result = await this.db.collection(collectionName).countDocuments();
+            this._dropConnection();
+            return result;
+
+        } catch (error) {
+
+            throw error;
+        }
+    };
+    
 };
+
 
  export default new MongoManager(config);
